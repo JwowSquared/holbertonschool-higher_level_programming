@@ -21,8 +21,6 @@ int check_cycle(listint_t *list)
 		if (itr == fast)
 			return (1);
 		itr = itr->next;
-		if (itr == NULL)
-			return (0);
 		fast = fast->next->next;
 	}
 
