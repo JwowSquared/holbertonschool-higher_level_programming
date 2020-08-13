@@ -4,10 +4,10 @@ number = random.randint(-10, 10)
 descriptor = "is "
 
 if number > 0:
-	descriptor += "positive"
+    descriptor += "positive"
 elif number < 0:
-	descriptor += "negative"
+    descriptor += "negative"
 else:
-	descriptor += "zero"
+    descriptor += "zero"
 
 print("{:d} {}".format(number, descriptor))
