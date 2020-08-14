@@ -2,10 +2,9 @@
 
 
 def new_in_list(my_list, idx, element):
-    new = []
-    for i in range(len(my_list)):
+    new = my_list.copy()
+    for i in range(len(new)):
         if i == idx:
-            new.append(element)
-        else:
-            new.append(my_list[i])
+            new[i] = element
+            break
     return new
