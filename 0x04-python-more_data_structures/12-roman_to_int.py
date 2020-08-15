@@ -2,6 +2,8 @@
 
 
 def roman_to_int(roman_string):
+    if roman_string is None or "":
+        return 0
     romans = {
         "I": 1,
         "V": 5,
