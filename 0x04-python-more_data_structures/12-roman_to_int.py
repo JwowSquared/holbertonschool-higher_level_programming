@@ -2,7 +2,7 @@
 
 
 def roman_to_int(roman_string):
-    if roman_string is None or "":
+    if not isinstance(roman_string, str) or roman_string is None:
         return 0
     romans = {
         "I": 1,
@@ -17,7 +17,7 @@ def roman_to_int(roman_string):
     total = 0
     for c in reversed(roman_string):
         if c in romans:
-            if romans[c] < top and (c is not "V" or "L" or "D"):
+            if romans[c] < top:
                 total += romans[c] * -1
             else:
                 top = romans[c]
