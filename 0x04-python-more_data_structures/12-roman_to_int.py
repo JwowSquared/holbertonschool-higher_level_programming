@@ -13,13 +13,13 @@ def roman_to_int(roman_string):
         "D": 500,
         "M": 1000
     }
-    vals = []
     top = 1
     total = 0
     for c in reversed(roman_string):
-        if romans[c] < top:
-            total += romans[c] * -1
-        else:
-            top = romans[c]
-            total += top
+        if c in romans:
+            if romans[c] < top:
+                total += romans[c] * -1
+            else:
+                top = romans[c]
+                total += top
     return total
