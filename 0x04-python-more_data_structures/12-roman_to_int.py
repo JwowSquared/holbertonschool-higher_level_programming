@@ -22,4 +22,6 @@ def roman_to_int(roman_string):
             else:
                 top = romans[c]
                 total += top
+        else:
+            return 0
     return total
