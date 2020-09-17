@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+o#!/usr/bin/python3
 
 
 def safe_print_integer_err(value):
@@ -8,3 +8,4 @@ def safe_print_integer_err(value):
         return True
     except ValueError as err:
         print("Exception: {}".format(err), file=sys.stderr)
+        return False
