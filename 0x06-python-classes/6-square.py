@@ -34,11 +34,11 @@ class Square:
         flag = 0
         if type(value) is tuple:
             flag += 1
-        if len(value) == 2:
+        if flag == 1 and len(value) == 2:
             flag += 1
-        if type(value[0]) is int and type(value[1]) is int:
+        if flag == 2 and type(value[0]) is int and type(value[1]) is int:
             flag += 1
-        if value[0] >= 0 and value[1] >= 0:
+        if flag == 3 and value[0] >= 0 and value[1] >= 0:
             flag += 1
         if flag == 4:
             self.__position = value
