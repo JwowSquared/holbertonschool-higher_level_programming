@@ -1,0 +1,30 @@
+"""
+This module tests standard and improper use of the function add_integer
+"""
+import unittest
+from 0-add_integer import add_integer
+
+
+class TestAddInteger(unittest.TestCase):
+    def test_result(self):
+        """Test standard use of the function"""
+        self.assertEqual(add_integer(0, 0), 0)
+        self.assertEqual(add_integer(2), 100)
+        self.assertEqual(add_integer(-4), 94)
+        self.assertEqual(add_integer(989898989898989800), 989898989898989898)
+        self.assertEqual(add_integer(2, 2), 4)
+        self.assertEqual(add_integer(-6, -11), -17)
+        self.assertEqual(add_integer(11111111111, 22222222222), 33333333333)
+
+    def test_float(self):
+        """Test type conversion when given a float"""
+        self.assertEqual(add_integer(3.14, 5.59), 9)
+        self.assertEqual(add_integer(7.15), 105)
+        self.assertEqual(add_integer(40, 4.4), 44)
+
+    def test_types(self):
+        """Test improper type use of the function"""
+        self.assertRaise(TypeError, add_integer, "Batman", 3.14)
+        self.assertRaise(TypeError, add_integer, (6, 6))
+        self.assertRaise(TypeError, add_integer, 6, [3, 4, 5])
+        self.assertRaise(TypeError, add_integer, None)
