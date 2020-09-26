@@ -14,7 +14,7 @@ def matrix_divided(matrix, div):
             raise TypeError(long_err)
         for i in row:
             if type(i) not in [int, float]:
-               raise TypeError(long_err)
+                raise TypeError(long_err)
 
     cols = len(matrix[0])
     for row in matrix:
