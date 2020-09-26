@@ -12,6 +12,9 @@ def matrix_divided(matrix, div):
     for row in matrix:
         if type(row) is not list:
             raise TypeError(long_err)
+        for i in row:
+            if type(i) not in [int, float]:
+               raise TypeError(long_err)
 
     cols = len(matrix[0])
     for row in matrix:
