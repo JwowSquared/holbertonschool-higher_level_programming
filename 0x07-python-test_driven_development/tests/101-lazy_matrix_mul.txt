@@ -10,12 +10,12 @@ Tests for Python 0x07 Task 7
 >>> matrix_mul("Batman", [[12]])
 Traceback (most recent call last):
     ...
-TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U21') dtype('<U21') dtype('<U21')
+TypeError: m_a must be a list
 
 >>> matrix_mul([[12]], "Robin")
 Traceback (most recent call last):
     ...
-TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U21') dtype('<U21') dtype('<U21')
+TypeError: m_b must be a list
 
 >>> matrix_mul([1, 2, 3], [[12]])
 Traceback (most recent call last):
