@@ -10,12 +10,12 @@ Tests for Python 0x07 Task 7
 >>> matrix_mul("Batman", [[12]])
 Traceback (most recent call last):
     ...
-TypeError: m_a must be a list
+ValueError: Scalar operands are not allowed, use '*' instead
 
 >>> matrix_mul([[12]], "Robin")
 Traceback (most recent call last):
     ...
-TypeError: m_b must be a list
+ValueError: Scalar operands are not allowed, use '*' instead
 
 >>> matrix_mul([1, 2, 3], [[12]])
 Traceback (most recent call last):
@@ -40,22 +40,22 @@ ValueError: shapes (2,2) and (1,0) not aligned: 2 (dim 1) != 1 (dim 0)
 >>> matrix_mul([[1, 2], ["Bob", "Saget"]], [[1, 2], [3, 4]])
 Traceback (most recent call last):
     ...
-ValueError: data type must provide an itemsize
+TypeError: invalid data type for einsum
 
 >>> matrix_mul([[1, 2], [3, 4]], [["John", "Stamos"], [3, 4]])
 Traceback (most recent call last):
     ...
-ValueError: data type must provide an itemsize
+TypeError: invalid data type for einsum
 
 >>> matrix_mul([[1], [2, 3]], [[1, 2], [3, 4]])
 Traceback (most recent call last):
     ...
-TypeError: each row of m_a must be of the same size
+TypeError: Object arrays are not currently supported
 
 >>> matrix_mul([[1, 2], [3, 4]], [[5, 6], [7]])
 Traceback (most recent call last):
     ...
-TypeError: each row of m_b must be of the same size
+TypeError: Object arrays are not currently supported
 
 >>> matrix_mul([[1, 2], [3, 4], [5, 6]], [[1, 2], [3, 4], [5, 6]])
 Traceback (most recent call last):
