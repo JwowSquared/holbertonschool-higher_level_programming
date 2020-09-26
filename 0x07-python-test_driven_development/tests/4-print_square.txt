@@ -1,0 +1,28 @@
+Tests for Python 0x07 Task 3
+============================
+
+>>> box = __import__("4-print_square").print_square
+
+>>> box(0)
+<BLANKLINE>
+
+>>> box(4)
+####
+####
+####
+####
+
+>>> box("3")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+>>> box(-2)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+>>> box()
+Traceback (most recent call last):
+    ...
+TypeError: print_square() missing 1 required positional argument: 'size'
