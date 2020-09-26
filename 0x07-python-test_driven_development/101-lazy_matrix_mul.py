@@ -55,6 +55,6 @@ def lazy_matrix_mul(m_a, m_b):
     try:
         ma = numpy.array(m_a)
         mb = numpy.array(m_b)
-        return ma.dot(mb).tolist()
+        return numpy.array2string(ma.dot(mb))
     except:
         raise

@@ -4,7 +4,8 @@ Tests for Python 0x07 Task 7
 >>> matrix_mul = __import__("101-lazy_matrix_mul").lazy_matrix_mul
 
 >>> print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
-[[7, 10], [15, 22]]
+[[ 7 10]
+ [15 22]]
 
 >>> matrix_mul("Batman", [[12]])
 Traceback (most recent call last):
