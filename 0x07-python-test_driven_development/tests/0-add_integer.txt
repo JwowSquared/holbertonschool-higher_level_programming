@@ -3,57 +3,31 @@ Tests for Python 0x07 Task 0
 
 >>> add = __import__('0-add_integer').add_integer
 
-Standard Case: 2 given integers or floats
----
->>> add(2, 2)
-4
->>> add(4, 4.4)
-8
->>> add(-6, -11)
--17
->>> add(4.9, 5.4)
-9
->>> add(0, 0)
-0
+>>> add(1.4, 2)
+3
 
-Standard Case: 1 given integer of float, default rval 98
----
->>> add(2)
-100
->>> add(-100)
--2
->>> add(3.6)
-101
->>> add(-2.2)
-96
->>> add(0)
-98
-
-Type Errors: giving the function something other than an int or float
----
->>> add("Batman")
-Traceback (most recent call last):
-    ...
-TypeError: a must be an integer
-
->>> add(6, (7, 8))
+>>> add(1, "2")
 Traceback (most recent call last):
     ...
 TypeError: b must be an integer
 
->>> add([], {})
+>>> add(1, 2)
+3
+
+>>> add(5, float("inf"))
 Traceback (most recent call last):
     ...
-TypeError: a must be an integer
+OverflowError: cannot convert float infinity to integer
 
-Other Errors: giving the function a float that fails the int() type cast
----
->>> add(float("NaN"), 212)
+>>> add(float("NaN"), 5)
 Traceback (most recent call last):
     ...
 ValueError: cannot convert float NaN to integer
 
->>> add(4.20e420)
+>>> add(2)
+100
+
+>>> add()
 Traceback (most recent call last):
     ...
-OverflowError: cannot convert float infinity to integer
+TypeError: add_integer() missing 1 required positional argument: 'a'
