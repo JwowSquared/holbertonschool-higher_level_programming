@@ -6,8 +6,10 @@ def text_indentation(text):
     """prints the given text with aditional newlines after punctuation"""
     if type(text) is not str:
         raise TypeError("text must be a string")
+    line = ""
     for c in text:
+        line += c
         if c in ['.', '?', ':']:
-            print("{}\n".format(c))
-        else:
-            print(c, end="")
+            print("{}\n".format(line.strip()))
+            line = ""
+    print(line.strip(), end="")
