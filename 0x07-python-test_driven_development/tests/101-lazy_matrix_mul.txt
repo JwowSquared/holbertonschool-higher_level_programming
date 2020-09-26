@@ -50,12 +50,12 @@ TypeError: invalid data type for einsum
 >>> matrix_mul([[1], [2, 3]], [[1, 2], [3, 4]])
 Traceback (most recent call last):
     ...
-TypeError: Object arrays are not currently supported
+ValueError: setting an array element with a sequence.
 
 >>> matrix_mul([[1, 2], [3, 4]], [[5, 6], [7]])
 Traceback (most recent call last):
     ...
-TypeError: Object arrays are not currently supported
+ValueError: setting an array element with a sequence.
 
 >>> matrix_mul([[1, 2], [3, 4], [5, 6]], [[1, 2], [3, 4], [5, 6]])
 Traceback (most recent call last):

@@ -6,8 +6,6 @@ def lazy_matrix_mul(m_a, m_b):
     """Multiply two matrices together with numpy"""
     try:
         import numpy
-        ma = numpy.array(m_a)
-        mb = numpy.array(m_b)
-        return numpy.matmul(ma, mb)
+        return numpy.matmul(m_a, m_b)
     except:
         raise
