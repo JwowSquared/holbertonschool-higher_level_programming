@@ -5,7 +5,10 @@
 def add_integer(a, b=98):
     """adds 2 numbers, default rval of 98. converts floats to integers"""
     if type(a) not in [int, float]:
-        raise TypeError("a must be integer")
+        raise TypeError("a must be an integer")
     if type(b) not in [int, float]:
-        raise TypeError("b must be integer")
-    return int(a) + int(b)
+        raise TypeError("b must be an integer")
+    try:
+        return int(a) + int(b)
+    except:
+        raise
