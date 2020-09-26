@@ -3,47 +3,47 @@ Tests for Python 0x07 Task 1
 
 >>> div = __import__('2-matrix_divided').matrix_divided
 
->>> print(div([[3]], 3))
+>>> div([[3]], 3)
 [[1.0]]
 
->>> print(div([[3, 9], [12, 15]], -3))
+>>> div([[3, 9], [12, 15]], -3)
 [[-1.0, -3.0], [-4.0, -5.0]]
 
->>> print(div([[4]], "4"))
+>>> div([[4]], "4")
 Traceback (most recent call last):
     ...
 TypeError: div must be a number
 
->>> print(div([[3, 9], [12, 15]], 0))
+>>> div([[3, 9], [12, 15]], 0)
 Traceback (most recent call last):
     ...
 ZeroDivisionError: division by zero
 
->>> print(div([[3, "9"], [15, 3]], 3))
+>>> div([[3, "9"], [15, 3]], 3)
 Traceback (most recent call last):
     ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
->>> print(div([[3, 9], [12, 15, 3]], 3))
+>>> div([[3, 9], [12, 15, 3]], 3)
 Traceback (most recent call last):
     ...
 TypeError: Each row of the matrix must have the same size
 
->>> print(div([[1, 2, 3]], float("inf")))
+>>> div([[1, 2, 3]], float("inf"))
 [[0.0, 0.0, 0.0]]
 
->>> print(div([[float("inf")]], 8))
+>>> div([[float("inf")]], 8)
 [[inf]]
 
->>> print(div([[float("NaN")]], float("NaN")))
+>>> div([[float("NaN")]], float("NaN"))
 [[nan]]
 
->>> print(div([[9]]))
+>>> div([[9]])
 Traceback (most recent call last):
     ...
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
->>> print(div())
+>>> div()
 Traceback (most recent call last):
     ...
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
