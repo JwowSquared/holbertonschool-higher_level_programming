@@ -1,0 +1,36 @@
+Tests for Python 0x07 Task 4
+============================
+
+>>> indent = __import__('5-text_indentation').text_indentation
+
+>>> indent("Holberton School")
+Holberton School
+
+>>> indent("Holberton.School")
+Holberton.
+<BLANKLINE>
+School
+
+>>> indent("Holberton. School? How are you: John")
+Holberton.
+<BLANKLINE>
+ School?
+<BLANKLINE>
+ How are you:
+<BLANKLINE>
+ John
+
+>>> indent(12)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> indent("""Holberton\n\nSchool""")
+Holberton
+<BLANKLINE>
+School
+
+>>> indent()
+Traceback (most recent call last):
+    ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
