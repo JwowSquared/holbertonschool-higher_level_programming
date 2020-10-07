@@ -1,0 +1,23 @@
+Tests for Python 0x0A Task 1
+============================
+
+>>> MyList = __import__('1-my_list').MyList
+
+>>> a = MyList()
+
+>>> a.append(6)
+>>> a.append(2)
+>>> a.append(1)
+>>> a.append(9)
+>>> a.append(7)
+>>> print(a)
+[6, 2, 1, 9, 7]
+
+>>> a.print_sorted()
+[1, 2, 6, 7, 9]
+
+>>> print(a)
+[6, 2, 1, 9, 7]
+
+>>> type(a)
+<class '1-my_list.MyList'>
