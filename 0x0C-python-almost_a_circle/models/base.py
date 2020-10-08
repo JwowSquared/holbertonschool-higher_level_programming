@@ -41,3 +41,10 @@ class Base:
             out = Base.to_json_string(d)
         with open(cls.__name__ + ".json", "w") as f:
             f.write(out)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """creates instances of rectangles or squares from a dictionary"""
+        out = cls(1, 1)
+        out.update(dictionary)
+        return out
