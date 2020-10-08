@@ -46,5 +46,6 @@ class Base:
     def create(cls, **dictionary):
         """creates instances of rectangles or squares from a dictionary"""
         out = cls(1, 1)
+        out.update(x=0, y=0)
         out.update(dictionary)
         return out
