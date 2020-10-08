@@ -48,7 +48,9 @@ class Base:
         out = []
         try:
             with open(cls.__name__ + ".json", "r") as f:
-                out.append(cls.create(cls.from_json_string(f.read())))
+                d = cls.from_json_string(f.read())
+            for i in d:
+                out.append(cls.create(**i))
         except:
             pass
         return out
