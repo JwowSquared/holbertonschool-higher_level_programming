@@ -40,4 +40,4 @@ class Base:
                 d.append(o.to_dictionary())
             out = Base.to_json_string(d)
         with open(cls.__name__ + ".json", "w") as f:
-            json.dumps(out, f)
+            f.write(out)
