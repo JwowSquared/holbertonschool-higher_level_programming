@@ -21,11 +21,7 @@ class Base:
         """converts a list of dictionaries to a string"""
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
-        out = "["
-        for d in list_dictionaries:
-            out += json.dumps(d) + ", "
-        print(out)
-        return out[:-2] + "]"
+        return json.dumps(list_dictionaries)
 
     @staticmethod
     def from_json_string(json_string):
