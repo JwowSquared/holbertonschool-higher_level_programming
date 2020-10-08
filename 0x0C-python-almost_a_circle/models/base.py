@@ -37,9 +37,9 @@ class Base:
         """converts objects into JSON and saves it to a file"""
         out = "[]"
         if list_objs is not None and list_objs != []:
-           d = []
-           for o in list_objs:
-               d.append(o.to_dictionary())
-           out = Base.to_json_string(d)
+            d = []
+            for o in list_objs:
+                d.append(o.to_dictionary())
+            out = Base.to_json_string(d)
         with open(cls.__name__ + ".json", "w") as f:
-            json.dumps(out, f)
+            f.write(out)
