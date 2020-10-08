@@ -16,6 +16,7 @@ class Base:
         else:
             self.id = id
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """converts a list of dictionaries to a string"""
         if list_dictionaries is None or list_dictionaries == []:
@@ -26,6 +27,7 @@ class Base:
         print(out)
         return out[:-2] + "]"
 
+    @staticmethod
     def from_json_string(json_string):
         """converts a string to a list of dictionaries"""
         if json_string is None or json_string == "":
