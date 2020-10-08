@@ -43,6 +43,17 @@ class Base:
             f.write(out)
 
     @classmethod
+    def load_from_file(cls):
+        """returns a list of objects converted from a JSON file"""
+        out = []
+        try:
+            with open(cls.__name__ + ".json", "r") as f:
+                out.append(cls.create(cls.from_json_string(f.read())))
+        except:
+            pass
+        return out
+
+    @classmethod
     def create(cls, **dictionary):
         """creates instances of rectangles or squares from a dictionary"""
         out = cls(1, 1)
