@@ -13,10 +13,9 @@ if __name__ == "__main__":
                          db=argv[3])
     engine = db.cursor()
 
-    engine.execute("SELECT * FROM states")
+    engine.execute("SELECT * FROM states WHERE name = '{}'".format(argv[4]))
     for record in engine.fetchall():
-        if record[1] == argv[4]:
-            print(record)
+        print(record)
 
     engine.close()
     db.close()
