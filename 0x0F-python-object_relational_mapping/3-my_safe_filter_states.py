@@ -13,7 +13,7 @@ if __name__ == "__main__":
                          db=argv[3])
     engine = db.cursor()
 
-    engine.execute("SELECT * FROM states WHERE name = %(match)s", {'match': argv[4]})
+    engine.execute("SELECT * FROM states WHERE name = %(m)s", {"m": argv[4]})
     for record in engine.fetchall():
         if record[1] == argv[4]:
             print(record)
