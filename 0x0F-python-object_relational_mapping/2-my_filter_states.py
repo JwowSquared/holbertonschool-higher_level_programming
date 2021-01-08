@@ -13,7 +13,7 @@ if __name__ == "__main__":
                          db=argv[3])
     engine = db.cursor()
 
-    engine.execute("SELECT * FROM states WHERE name = '{}'".format(argv[4]))
+    engine.execute("SELECT * FROM states WHERE name LIKE '{}'".format(argv[4]))
     for record in engine.fetchall():
         print(record)
 
