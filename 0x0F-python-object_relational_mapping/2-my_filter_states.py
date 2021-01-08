@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     engine.execute("SELECT * FROM states WHERE name = '{}'".format(argv[4]))
     for record in engine.fetchall():
-        if record == argv[4]:
+        if record[1] == argv[4]:
             print(record)
 
     engine.close()
