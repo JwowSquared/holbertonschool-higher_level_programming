@@ -16,7 +16,7 @@ if __name__ == "__main__":
     engine.execute("""SELECT cities.id, cities.name, states.name FROM states
                       INNER JOIN cities ON states.id=cities.state_id""")
     for record in engine.fetchall():
-            print(record)
+        print(record)
 
     engine.close()
     db.close()
