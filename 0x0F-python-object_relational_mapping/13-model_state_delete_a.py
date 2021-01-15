@@ -21,6 +21,6 @@ if __name__ == "__main__":
     for record in session.query(State):
         if "a" in record.name:
             session.delete(record)
-        session.commit()
+    session.commit()
 
     session.close()
