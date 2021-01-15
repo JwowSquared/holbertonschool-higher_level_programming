@@ -19,9 +19,9 @@ if __name__ == "__main__":
     session = factory()
 
     out = "Nothing"
-    for record in session.query(State):
+    record = session.query(State).first()
+    if record:
         out = "{}: {}".format(record.id, record.name)
-        break
     print(out)
 
     session.close()
