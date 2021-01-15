@@ -21,7 +21,7 @@ if __name__ == "__main__":
     out = "Not found"
     for record in session.query(State):
         if argv[4] == record.name:
-            out = "{}: {}".format(record.id, record.name)
+            out = record.id
     print(out)
 
     session.close()
