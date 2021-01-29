@@ -1,7 +1,8 @@
 #!/usr/bin/node
 const args = process.argv;
 const argc = args.length;
-let i, nums = [];
+const nums = [];
+let i;
 
 if (argc < 4) {
   console.log(0);
