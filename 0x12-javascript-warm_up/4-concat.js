@@ -1,5 +1,13 @@
 #!/usr/bin/node
 const args = process.argv;
-const out = [args[2], args[3]];
+let left = 'undefined';
+let right = 'undefined';
 
-console.log(out.join(' is '));
+if (args[2]) {
+  left = args[2];
+}
+if (args[3]) {
+  right = args[3];
+}
+
+console.log(left + ' is ' + right);
