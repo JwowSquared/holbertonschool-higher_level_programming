@@ -1,3 +1,3 @@
 #!/bin/bash
-# curls the address and counts the amount of chars
-curl -L $1
+# curls the address, and follows redirects
+curl -sL $1
