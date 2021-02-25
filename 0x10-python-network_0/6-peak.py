@@ -4,15 +4,16 @@
 
 def find_peak(nums):
     """x"""
-    if nums is None or len(nums) is 0:
+    if nums is None or nums == []:
         return None
 
-    nums.append(None)
-    up = True
-    prev = nums[0]
-    for i in range(1, len(nums)):
-        if up and (nums[i] is None or prev > nums[i]):
-            return prev
-        prev = nums[i]
+    if len(nums) == 1:
+        return nums[0]
 
-    return None
+    if nums[0] > nums[1]:
+        return nums[0]
+
+    if nums[-1] > nums[-2]:
+        return nums[-1]
+
+    return find_peak(nums[1:-1])
