@@ -8,15 +8,11 @@ def find_peak(nums):
         return None
 
     nums.append(None)
-    peaks = []
     up = True
     prev = nums[0]
     for i in range(1, len(nums)):
         if up and (nums[i] is None or prev > nums[i]):
-            up = False
-            peaks.append(prev)
-        elif nums[i] is not None and prev <= nums[i]:
-            up = True
+            return prev
         prev = nums[i]
 
-    return peaks
+    return None
