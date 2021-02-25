@@ -18,7 +18,7 @@ def find_peak(nums):
     if nums[-1] > nums[-2]:
         return nums[-1]
 
-    if length == 2 and nums[0] == nums[1]:
+    if length == 2:
         return nums[0]
 
     return find_peak(nums[1:-1])
